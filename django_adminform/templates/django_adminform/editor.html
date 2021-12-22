@@ -2,7 +2,7 @@
 
 <textarea cols="40" id="id_{{ name }}" name="{{ name }}" rows="10" required="" style="display: none;">{{ data|safe }}</textarea>
 
-{% url 'django_jsonform:upload' as upload_endpoint %}
+{% url 'django_adminform:upload' as upload_endpoint %}
 <script>
 (function() {
     var config = {

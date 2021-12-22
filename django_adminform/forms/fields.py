@@ -12,7 +12,7 @@ else:
     if 'postgres' in settings.DATABASES['default']['ENGINE']:
         from django.contrib.postgres.forms import JSONField as DjangoJSONFormField
     else:
-        from django_jsonform.forms.compat import JSONFormField as DjangoJSONFormField
+        from django_adminform.forms.compat import JSONFormField as DjangoJSONFormField
 
 try:
     from django.contrib.postgres.forms import SimpleArrayField
@@ -20,7 +20,7 @@ except ImportError:
     class SimpleArrayField:
         mock_field = True
 
-from django_jsonform.widgets import JSONFormWidget
+from django_adminform.widgets import JSONFormWidget
 
 from django.forms.widgets import TextInput
 
