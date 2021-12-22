@@ -14,7 +14,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-from django_jsonform import __version__
+from django_adminform import __version__
 
 
 # -- Project information -----------------------------------------------------

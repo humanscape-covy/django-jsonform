@@ -1,5 +1,5 @@
 include README.md
 include LICENSE.txt
-recursive-include django_jsonform/static *
-recursive-include django_jsonform/templates *
-prune django_jsonform/static/django_jsonform/local
+recursive-include django_adminform/static *
+recursive-include django_adminform/templates *
+prune django_adminform/static/django_adminform/local
