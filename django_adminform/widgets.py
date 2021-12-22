@@ -5,7 +5,7 @@ from django.utils.safestring import mark_safe
 
 
 class JSONFormWidget(forms.Widget):
-    template_name = 'django_jsonform/editor.html'
+    template_name = 'django_adminform/editor.html'
 
     def __init__(self, schema, model_name=''):
         super().__init__()
@@ -31,13 +31,13 @@ class JSONFormWidget(forms.Widget):
     def media(self):
         css = {
             'all': [
-                'django_jsonform/style.css',
+                'django_adminform/style.css',
             ]
         }
         js = [
-            'django_jsonform/vendor/react.production.min.js',
-            'django_jsonform/vendor/react-dom.production.min.js',
-            'django_jsonform/react-json-form.min.js',
+            'django_adminform/vendor/react.production.min.js',
+            'django_adminform/vendor/react-dom.production.min.js',
+            'django_adminform/react-json-form.min.js',
         ]
 
         return forms.Media(css=css, js=js)

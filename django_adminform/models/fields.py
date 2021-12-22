@@ -10,7 +10,7 @@ else:
     if 'postgres' in settings.DATABASES['default']['ENGINE']:
         from django.contrib.postgres.fields import JSONField as DjangoJSONField
     else:
-        from django_jsonform.models.compat import JSONField as DjangoJSONField
+        from django_adminform.models.compat import JSONField as DjangoJSONField
 
 try:
     from django.contrib.postgres.fields import ArrayField as DjangoArrayField
@@ -18,8 +18,8 @@ except ImportError:
     class DjangoArrayField:
         mock_field = True
 
-from django_jsonform.forms.fields import JSONFormField
-from django_jsonform.forms.fields import ArrayFormField
+from django_adminform.forms.fields import JSONFormField
+from django_adminform.forms.fields import ArrayFormField
 
 
 class JSONField(DjangoJSONField):
